@@ -1,0 +1,67 @@
+.container-fluid#about-container
+  .row
+    .col-xs-12.heading
+      %h1 About me 
+    .col-xs-12.col-sm-6
+      = image_tag "me.png", alt: "Picture of me", class: "profile-pic"
+      %p.profile-text Movin' on up to the east side. We finally got a piece of the pie. I have always wanted to have a neighbor just like you. I've always wanted to live in a neighborhood with you. On the most sensational inspirational celebrational Muppetational… This is what we call the Muppet Show. So get a witch's shawl on a broomstick you can crawl on. Were gonna pay a call on the Addams Family. They're creepy and they're kooky mysterious and spooky. They're all together ooky the Addams Family. These Happy Days are yours and mine Happy Days. Why do we always come here? I guess well never know. Its like a kind of torture to have to watch the show. Come and listen to a story about a man named Jed - a poor mountaineer barely kept his family fed? In 1972 a crack commando unit was sent to prison by a military court for a crime they didn't commit. These men promptly escaped from a maximum security stockade to the Los Angeles underground? The Brady Bunch the Brady Bunch that's the way we all became the Brady Bunch. And you know where you were then. Girls were girls and men were men. Mister we could use a man like Herbert Hoover again.
+    .col-xs-12.col-sm-6
+      %h3 FAQs
+      #accordion.panel-group
+        / panel 1
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+                1.
+                %span Why become a web developer?
+                %span.caret
+          #collapseOne.panel-collapse.collapse
+            .panel-body
+              I've always been a geek at heart. When I was tiny I remember spending hours typing in DOS just so I could draw a circle on a screen. But then someone showed me a guitar, and lets be fair...girls prefer guitars. But as I got older I needed something stable. Web developing cures my creative and geek needs. Win win!
+        / panel 2
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                2. Any hobbies?
+                %span.caret
+          #collapseTwo.panel-collapse.collapse
+            .panel-body
+              Other than the usual (reading, walking, breathing) I'm still a musician. Famous in my own living room don't you know! I don't play live anymore but you never stop playing. I've been know to give the odd free guitar lesson too.
+        / panel 3
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
+                3. What did you want to be growing up?
+                %span.caret
+          #collapseThree.panel-collapse.collapse
+            .panel-body
+              You may have guessed it from the above but...A Rock Star! Who wouldn't?!?!?! I did alright in my day. Worked with producers from Portishead and Elton John. Toured all over the U.K. They were good days.
+        / panel 4
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseFour"}
+                4. What does the future look like for you?
+                %span.caret
+          #collapseFour.panel-collapse.collapse
+            .panel-body
+              For now I just aim to be the best I can be at what I'm doing. But after that I'll move in to Apps, Programs maybe even Game Development.
+        / panel 5
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseFive"}
+                5. What's it like for a Brit in the US?
+                %span.caret
+          #collapseFive.panel-collapse.collapse
+            .panel-body
+              The coffee is better for sure! And the weather (mostly). There's so much more positivity and truly helpful people who want you to succeed. But you guys really don't understand what a Bacon Butty is.
+
+    .col-xs-12.col-sm-4.col-sm-offset-4
+      .embed-responsive.embed-responsive-16by9
+        %iframe.embed-responsive-item{:src => "https://www.youtube.com/embed/YIOT2e2vV9Y"}
+
+

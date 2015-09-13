@@ -1,0 +1,14 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{data: {:toggle => "collapse", :target => "#navbar"}}
+        %span.sr-only Toggle Navigation
+        - 3.times do
+          %span.icon-bar
+      = link_to "Brand", nil, class: "navbar-brand"
+
+    .collapse.navbar-collapse#navbar
+      %ul.nav.navbar-nav.navbar-right
+        %li= link_to "About Me"
+        %li= link_to "Work Examples"
+        %li= link_to "Contact Me", contact_path, :remote => true, data: {:toggle => "modal", :target => "#contact"}

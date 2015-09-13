@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml', '~> 4.0.7'
 gem "haml-rails", "~> 0.9"
+gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'byebug'
