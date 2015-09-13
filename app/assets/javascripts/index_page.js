@@ -22,11 +22,16 @@ $(function(){
   var htmlIcon = $('.icon-html');
   var intro = $('#intro-container');
   var introBox = $('.intro-box');
+  var aboutText = $('#about-me-text');
 
   $('[data-scroll-speed]').moveIt();
 
   intro.css({opacity : 0});
   introBox.css({opacity : 0});
+  aboutText.css({
+    opacity : 0,
+    letterSpacing : "2em"
+  })
 
   $window.on('scroll', function() {
     var $scroll = $window.scrollTop();
@@ -37,7 +42,13 @@ $(function(){
         $(this).delay(time).animate({opacity : 1});
         time += 200;
       });
-    } 
+    }
+    if ($scroll > 330) {
+      aboutText.animate({
+        opacity : 1,
+        letterSpacing : "-0.03em"
+      }, 1000)
+    }
   })
 });
 
