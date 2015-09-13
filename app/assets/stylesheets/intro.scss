@@ -1,15 +1,22 @@
 #intro-container {
-    margin-top: -100px;
+    background-color: #CEE2E1;
+    padding: 4% 2%;
 }
-.icon {
-    border: 1px solid black;
-    text-align: center;
+.icon-html {
+    background: #B5D3DB url(Coding-Html.svg) center center;
     width: 90px;
     height: 90px;
     border-radius: 100px;
     margin: 0 auto;
-    line-height: 84px;
-    background-color: white;
+}
+.icon-rails {
+    @extend .icon-html;
+    background: url(ruby-rails.svg) center center;
+    background-size: cover;
+}
+.icon-responsive {
+    @extend .icon-html;
+    background: url(Adaptive_design.svg) center center;
 }
 .intro-text {
     margin-top: 15px

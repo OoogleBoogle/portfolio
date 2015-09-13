@@ -5,10 +5,10 @@
         %span.sr-only Toggle Navigation
         - 3.times do
           %span.icon-bar
-      = link_to "Brand", nil, class: "navbar-brand"
+      = link_to image_tag('logo.png', alt: "logo", class: "navbar-brand"), "#intro-container"
 
     .collapse.navbar-collapse#navbar
       %ul.nav.navbar-nav.navbar-right
-        %li= link_to "About Me"
-        %li= link_to "Work Examples"
+        %li= link_to "About Me", "#about-container"
+        %li= link_to "Work Examples", "#examples"
         %li= link_to "Contact Me", contact_path, :remote => true, data: {:toggle => "modal", :target => "#contact"}

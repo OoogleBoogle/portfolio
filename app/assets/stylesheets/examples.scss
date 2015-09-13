@@ -1,6 +1,19 @@
-.cv-link {
-    text-align: center;
+#examples {
+    padding: 4% 2%;
+    background-color: #5A9C98;
 }
-.glyphicon-file {
-    font-size: 12em;
+.linkedin {
+    @extend .github;
+}
+.github {
+    text-align: center;
+    img {
+        width: 35%;
+    }
+}
+.work-example {
+    @extend .github;
+    img {
+        width: 58%;
+    }
 }

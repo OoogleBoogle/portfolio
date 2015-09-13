@@ -1,3 +1,19 @@
-.jumbotron img {
+.hero img {
     width: 100%;
+    margin-top: 50px; 
+}
+.heading {
+    text-align: center;
+    font-size: 5em;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: -0.03em;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.45em;
+}
+.panel-body p {
+    @extend p;
+    font-size: 1em;
 }
