@@ -3,7 +3,7 @@
     padding: 4% 2%;
 }
 .icon-html {
-    background: #B5D3DB url(Coding-Html.svg) center center;
+    background: #B5D3DB url(../Coding-Html.svg) center center;
     width: 90px;
     height: 90px;
     border-radius: 100px;
@@ -11,12 +11,12 @@
 }
 .icon-rails {
     @extend .icon-html;
-    background: url(ruby-rails.svg) center center;
+    background: url(../ruby-rails.svg) center center;
     background-size: cover;
 }
 .icon-responsive {
     @extend .icon-html;
-    background: url(Adaptive_design.svg) center center;
+    background: url(../Adaptive_design.svg) center center;
 }
 .intro-text {
     margin-top: 15px
