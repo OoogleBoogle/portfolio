@@ -31,8 +31,9 @@ $(function(){
     var intro = $('#intro-container');
     var introBox = $('.intro-box');
     var aboutText = $('#about-me-text');
+    var aboutBox = $('#about-container');
 
-
+    aboutBox.css({marginTop : -343})
     intro.css({opacity : 0});
     introBox.css({opacity : 0});
     aboutText.css({
@@ -53,7 +54,7 @@ $(function(){
         });
       };
 
-      if ($scroll > 330) {
+      if ($scroll > 430) {
         aboutText.animate({
           opacity : 1,
           letterSpacing : "-0.03em"
