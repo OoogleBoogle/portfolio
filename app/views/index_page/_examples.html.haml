@@ -1,9 +1,9 @@
 .container-fluid#examples{data: {scroll: {speed: 0}}}
   %h1.heading Work Examples
   .row
-    .col-xs-12.col-sm-4.work-example
-      = link_to image_tag("ka photography.png", alt: "work example 1", class: "img-responsive img-thumbnail"), "https://career-foundry-app-2.herokuapp.com/", target: "_blank"
-    .col-xs-12.col-sm-4.github
-      = link_to image_tag("github.svg", alt: "GitHub icon"), "https://github.com/OoogleBoogle", target: "_blank"
-    .col-xs-12.col-sm-4.linkedin
-      = link_to image_tag("linkedin.svg", alt: "linkedin icon"), "https://www.linkedin.com/in/simattfield", target: "_blank"
+    .col-xs-12.col-sm-4.work-example.jiggle
+      = link_to image_tag("ka photography.png", alt: "work example 1", class: "img-responsive img-thumbnail", title: "Example e-commerce site built using Ruby on Rails and the Bootstrap framework", data: {:toggle => "tooltip", :placement => "top"}), "https://career-foundry-app-2.herokuapp.com/", target: "_blank"
+    .col-xs-12.col-sm-4.github.jiggle
+      = link_to image_tag("github.svg", alt: "GitHub icon", data: {:toggle => "tooltip", :placement => "top"}, title: "My Github Profile"), "https://github.com/OoogleBoogle", target: "_blank"
+    .col-xs-12.col-sm-4.linkedin.jiggle
+      = link_to image_tag("linkedin.svg", alt: "linkedin icon", data: {:toggle => "tooltip", :placement => "top"}, title: "My LinkedIn Profile"), "https://www.linkedin.com/in/simattfield", target: "_blank"

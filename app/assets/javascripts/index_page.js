@@ -1,23 +1,26 @@
-$.fn.moveIt = function(){
-  var $els = $(this);
-  var $window = $(window);
-  var scrollPos = $window.scrollTop();
+// $.fn.moveIt = function(){
+//   var $els = $(this);
+//   var $window = $(window);
+//   var scrollPos = $window.scrollTop();
   
-  $window.on('scroll', function(){
-    scrollPos = $window.scrollTop();
-    $els.each(moveEl);
-  });
+//   $window.on('scroll', function(){
+//     scrollPos = $window.scrollTop();
+//     $els.each(moveEl);
+//   });
   
-  function moveEl(){
-    var $this = $(this);
-    var scrollSpeed = parseInt($this.data('scroll-speed'));
-    var elPos = scrollPos / scrollSpeed;
+//   function moveEl(){
+//     var $this = $(this);
+//     var scrollSpeed = parseInt($this.data('scroll-speed'));
+//     var elPos = scrollPos / scrollSpeed;
     
-    $this.css('transform', 'translateY(-' + elPos + 'px)');
-  }
-}
+//     $this.css('transform', 'translateY(-' + elPos + 'px)');
+//   }
+// }
 
 $(function(){
+  // int tooltips
+  $('[data-toggle="tooltip"]').tooltip();
+
   var isMobile = false; //initiate as false
   // device detection
   if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -25,17 +28,13 @@ $(function(){
   
   
   if (!isMobile) {
-    $('[data-scroll-speed]').moveIt();
     var $window = $(window);
     var htmlIcon = $('.icon-html');
     var intro = $('#intro-container');
     var introBox = $('.intro-box');
     var aboutText = $('#about-me-text');
     var aboutBox = $('#about-container');
-
-    aboutBox.css({marginTop : -343})
-    intro.css({opacity : 0});
-    introBox.css({opacity : 0});
+    
     aboutText.css({
       opacity : 0,
       letterSpacing : "2em"
@@ -45,16 +44,17 @@ $(function(){
 
       var $scroll = $window.scrollTop();
 
-      if ($scroll > 150) {
-        intro.animate({ opacity : 1 });
+      if ($scroll >= 180) {
         var time = 500;
         introBox.each(function() {
           $(this).delay(time).animate({opacity : 1});
-          time += 200;
+          time += 500;
         });
-      };
+      } else {
+        introBox.css({opacity : 0});
+      }
 
-      if ($scroll > 430) {
+      if ($scroll > 480) {
         aboutText.animate({
           opacity : 1,
           letterSpacing : "-0.03em"

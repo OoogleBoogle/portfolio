@@ -1,14 +1,14 @@
 .container-fluid#about-container{data: {scroll: {speed: 0}}}
   .row
-    %h1.heading#about-me-text About me
-    .col-xs-12.col-sm-6.col-sm-offset-3
+    %h1.heading.col-xs-12#about-me-text About me
+    .col-xs-12.col-sm-6
       = image_tag "me.png", alt: "Picture of me", class: "profile-pic"
       %p.profile-text I am UK citizen and permanent resident of San Francisco seeking employment. Legally able to work in the U.S; sponsorship is not required. Highly determined and organized individual who adapts to new environments with ease. Quick to learn new procedures and digest complex information with a keen eye for detail and excellent communication skills. Develops strong working relationships with clients and colleagues alike, with a confident, outgoing, enthusiastic, and approachable character. Experienced in working to tight deadlines in pressured situations, managing own time and others, working as part of a team or individually.
       %br
       %p.profile-text With a desire to work in web development I signed up for a course with CareerFoundry.com and, after completing it almost a month early, now want to get a junior/entry level position in front end development.
-    .col-xs-12.col-sm-6.video
-      .embed-responsive.embed-responsive-16by9
-        %iframe.embed-responsive-item{:src => "https://www.youtube.com/embed/YIOT2e2vV9Y"}
+    -# .col-xs-12.col-sm-6.video
+    -#   .embed-responsive.embed-responsive-16by9
+    -#     %iframe.embed-responsive-item{:src => "https://www.youtube.com/embed/YIOT2e2vV9Y"}
     .col-xs-12.col-sm-6
       %h3 FAQs
       #accordion.panel-group

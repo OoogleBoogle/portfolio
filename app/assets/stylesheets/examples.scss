@@ -2,18 +2,26 @@
     padding: 4% 2%;
     background-color: #5A9C98;
 }
-.linkedin {
-    @extend .github;
-}
 .github {
     text-align: center;
     img {
-        width: 35%;
+        width: 25%;
     }
+}
+.linkedin {
+    @extend .github;
 }
 .work-example {
     @extend .github;
     img {
-        width: 58%;
+        width: 44%;
     }
+}
+@keyframes Jiggle {
+    25% {transform: rotate(2deg);}
+    75% {transform: rotate(-2deg);}
+}
+.jiggle:hover {
+    animation-name: Jiggle;
+    animation-duration: 0.5s;
 }
