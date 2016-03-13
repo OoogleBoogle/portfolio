@@ -1,7 +1,13 @@
 #intro-container {
     background-color: #CEE2E1;
     // padding: 4% 2%;
-    margin-top: -28px;
+    // margin-top: -28px;
+    @media screen and (min-width: 800px) {
+        height: 95vh;
+        .intro-box {
+            margin-top: 10%
+        }
+    }
 }
 .icon-html {
     background: #B5D3DB url(../Coding-Html.svg) center center;

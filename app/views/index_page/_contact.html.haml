@@ -5,7 +5,7 @@
         %span Close &times;
       %h4.modal-title#modal-label Contact Me
     .modal-body
-      = form_tag({controller: "index_page", action: "message"}, method: :post)  do
+      = form_tag("/index_page/message_received")  do
         .form-group
           = text_field_tag :name, nil, :placeholder => "Name...", class: "form-control"
         .form-group

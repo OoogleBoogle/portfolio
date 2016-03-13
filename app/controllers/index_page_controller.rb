@@ -3,14 +3,18 @@ class IndexPageController < ApplicationController
   end
 
   def contact
-    respond_to do |format|
-      format.html
-      format.js
-    end
+
   end
   
-  def message
-
+  def message_received
+    @name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
+    ActionMailer::Base.mail(
+      :from => @email,
+      :to => "myemail@email.com",
+      :subject => "New message received from #{@name}",
+      :message => @message).deliver_now
   end
 
 end

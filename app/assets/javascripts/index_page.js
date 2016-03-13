@@ -1,22 +1,3 @@
-// $.fn.moveIt = function(){
-//   var $els = $(this);
-//   var $window = $(window);
-//   var scrollPos = $window.scrollTop();
-  
-//   $window.on('scroll', function(){
-//     scrollPos = $window.scrollTop();
-//     $els.each(moveEl);
-//   });
-  
-//   function moveEl(){
-//     var $this = $(this);
-//     var scrollSpeed = parseInt($this.data('scroll-speed'));
-//     var elPos = scrollPos / scrollSpeed;
-    
-//     $this.css('transform', 'translateY(-' + elPos + 'px)');
-//   }
-// }
-
 $(function(){
   // int tooltips
   $('[data-toggle="tooltip"]').tooltip();
@@ -30,36 +11,26 @@ $(function(){
   if (!isMobile) {
     var $window = $(window);
     var htmlIcon = $('.icon-html');
-    var intro = $('#intro-container');
+    // var intro = $('#intro-container');
+    var intro = document.getElementById('intro-container');
     var introBox = $('.intro-box');
     var aboutText = $('#about-me-text');
     var aboutBox = $('#about-container');
-    
-    aboutText.css({
-      opacity : 0,
-      letterSpacing : "2em"
-    });
 
     $window.on('scroll', function() {
 
       var $scroll = $window.scrollTop();
 
-      if ($scroll >= 180) {
-        var time = 500;
-        introBox.each(function() {
-          $(this).delay(time).animate({opacity : 1});
-          time += 500;
-        });
-      } else {
-        introBox.css({opacity : 0});
-      }
-
-      if ($scroll > 480) {
-        aboutText.animate({
-          opacity : 1,
-          letterSpacing : "-0.03em"
-        }, 1000);
-      }
+      intro.style.opacity = $scroll / 850;
+      // if ($scroll >= 180) {
+      //   var time = 500;
+      //   introBox.each(function() {
+      //     $(this).delay(time).animate({opacity : 1});
+      //     time += 500;
+      //   });
+      // } else {
+      //   introBox.css({opacity : 0});
+      // }
     });
   };
 });
